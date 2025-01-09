@@ -4,9 +4,9 @@
              x:Class="MobilnaEgzZad.MainPage">
 
     <StackLayout BackgroundColor="LightCyan">
-        <Label FontSize="24" Text="Usługi sprzątające" TextColor="Black" HorizontalOptions="Center"/>
+        <Label FontSize="35" Text="Usługi sprzątające" TextColor="Black" HorizontalOptions="Center"/>
 
-        <Frame BackgroundColor="AliceBlue" BorderColor="Blue">
+        <Frame BackgroundColor="AliceBlue" BorderColor="Blue" Margin="10">
             <StackLayout RadioButtonGroup.GroupName="services">
                 <RadioButton Content="Pranie" x:Name="washing" CheckedChanged="CheckSelection"/>
                 <RadioButton Content="Odkurzanie" x:Name="vaccuming" CheckedChanged="CheckSelection"/>
@@ -28,7 +28,7 @@
             <Image x:Name="image" WidthRequest="300" HorizontalOptions="Center" HeightRequest="300"/>
         </StackLayout>
 
-        <Button Text="Zamów" Clicked="Accept" HorizontalOptions="Center" WidthRequest="150" BackgroundColor="DarkGreen" TextColor="White"/>
+        <Button Text="Zamów" Clicked="Accept" HorizontalOptions="Center" WidthRequest="200" BackgroundColor="DarkGreen" TextColor="White"/>
     </StackLayout>
 
 </ContentPage>
