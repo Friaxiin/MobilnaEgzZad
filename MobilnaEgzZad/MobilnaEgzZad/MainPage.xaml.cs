@@ -34,12 +34,14 @@ namespace MobilnaEgzZad
                 Price = 50;
                 service = "Pranie";
                 image.Source = "pralka.jpg";
+                fasterService.IsChecked = false;
             }
             if (vaccuming.IsChecked)
             {
                 Price = 70;
                 service = "Odkurzanie";
                 image.Source = "odkurzacz.jpg";
+                fasterService.IsChecked = false
             }
             price.Text = Price.ToString();
         }
