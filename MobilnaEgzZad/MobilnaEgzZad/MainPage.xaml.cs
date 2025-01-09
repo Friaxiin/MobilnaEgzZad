@@ -15,6 +15,11 @@ namespace MobilnaEgzZad
         public MainPage()
         {
             InitializeComponent();
+
+            if (washing.IsChecked || vaccuming.IsChecked)
+            {
+                fasterService.IsEnabled = false;
+            }
         }
         private void Accept(object sender, EventArgs e)
         {
@@ -35,6 +40,7 @@ namespace MobilnaEgzZad
                 service = "Pranie";
                 image.Source = "pralka.jpg";
                 fasterService.IsChecked = false;
+                fasterService.IsEnabled = true;
             }
             if (vaccuming.IsChecked)
             {
@@ -42,13 +48,14 @@ namespace MobilnaEgzZad
                 service = "Odkurzanie";
                 image.Source = "odkurzacz.jpg";
                 fasterService.IsChecked = false;
+                fasterService.IsEnabled = true;
+
             }
             price.Text = Price.ToString() + " zł";
         }
         private void CheckCheckbox(object sender, CheckedChangedEventArgs e)
         {
-            if (washing.IsChecked || vaccuming.IsChecked)
-            {
+            
                 if (fasterService.IsChecked)
                 {
                     price.Text = (1.3 * Price).ToString() + " zł";
@@ -57,11 +64,6 @@ namespace MobilnaEgzZad
                 {
                     price.Text = Price.ToString() + " zł";
                 }
-            }
-            else
-            {
-                fasterService.IsEnabled = false;
-            }
         }
     }
 }
