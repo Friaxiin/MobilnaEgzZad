@@ -7,13 +7,13 @@
         <Label>Usługi sprzątające</Label>
 
         <StackLayout RadioButtonGroup.GroupName="services">
-            <RadioButton Content="Pranie" x:Name="washing"/>
-            <RadioButton Content="Odkurzanie" x:Name="vaccuming"/>
+            <RadioButton Content="Pranie" x:Name="washing" CheckedChanged="CheckSelection"/>
+            <RadioButton Content="Odkurzanie" x:Name="vaccuming" CheckedChanged="CheckSelection"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal">
             <Label>Usługa przyspieszona</Label>
-            <CheckBox x:Name="fasterService"/>   
+            <CheckBox x:Name="fasterService" CheckedChanged="CheckCheckbox"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal">
@@ -26,7 +26,6 @@
             <Image x:Name="image"/>
         </StackLayout>
 
-        <Button Text="Sprawdź cenę" Clicked="CheckPrice"/>
         <Button Text="Zamów" Clicked="Accept"/>
     </StackLayout>
 
