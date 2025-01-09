@@ -43,18 +43,17 @@ namespace MobilnaEgzZad
                 image.Source = "odkurzacz.jpg";
                 fasterService.IsChecked = false;
             }
-            price.Text = Price.ToString();
+            price.Text = Price.ToString() + " zł";
         }
         private void CheckCheckbox(object sender, CheckedChangedEventArgs e)
         {
             if (fasterService.IsChecked)
             {
-                price.Text = (1.3 * Price).ToString();
+                price.Text = (1.3 * Price).ToString() + " zł";
             }
             else
             {
-                price.Text = Price.ToString();
-
+                price.Text = Price.ToString() + " zł";
             }
         }
     }

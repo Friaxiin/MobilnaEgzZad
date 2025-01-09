@@ -6,7 +6,7 @@
     <StackLayout BackgroundColor="LightCyan">
         <Label FontSize="35" Text="Usługi sprzątające" TextColor="Black" HorizontalOptions="Center"/>
 
-        <Frame BackgroundColor="AliceBlue" BorderColor="Blue" Margin="10">
+        <Frame BackgroundColor="AliceBlue" BorderColor="Blue" Margin="10" CornerRadius="20">
             <StackLayout RadioButtonGroup.GroupName="services">
                 <RadioButton Content="Pranie" x:Name="washing" CheckedChanged="CheckSelection"/>
                 <RadioButton Content="Odkurzanie" x:Name="vaccuming" CheckedChanged="CheckSelection"/>
@@ -21,7 +21,6 @@
         <StackLayout Orientation="Horizontal">
             <Label Text="Cena " FontSize="16" TextColor="Black"/>
             <Label Text="" x:Name="price" FontSize="16" TextColor="Black"/>
-            <Label Text=" zł" FontSize="16" TextColor="Black"/>
         </StackLayout>
 
         <StackLayout HeightRequest="300">
