@@ -4,7 +4,7 @@
              x:Class="MobilnaEgzZad.MainPage">
 
     <StackLayout BackgroundColor="LightCyan">
-        <Label FontSize="Header" Text="Usługi sprzątające" TextColor="Black" HorizontalOptions="Center"/>
+        <Label FontSize="24" Text="Usługi sprzątające" TextColor="Black" HorizontalOptions="Center"/>
 
         <Frame BackgroundColor="AliceBlue" BorderColor="Blue">
             <StackLayout RadioButtonGroup.GroupName="services">
@@ -14,18 +14,18 @@
         </Frame>
 
         <StackLayout Orientation="Horizontal">
-            <Label FontSize="16" Text="Usługa przyspieszona" TextColor="Black"/>
+            <Label FontSize="16" Text="Usługa przyspieszona" TextColor="Black" VerticalOptions="Center"/>
             <CheckBox x:Name="fasterService" CheckedChanged="CheckCheckbox" Color="Black"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal">
-            <Label Text="Cena " FontSize="16"/>
-            <Label Text="" x:Name="price" FontSize="16"/>
-            <Label Text=" zł" FontSize="16"/>
+            <Label Text="Cena " FontSize="16" TextColor="Black"/>
+            <Label Text="" x:Name="price" FontSize="16" TextColor="Black"/>
+            <Label Text=" zł" FontSize="16" TextColor="Black"/>
         </StackLayout>
 
-        <StackLayout>
-            <Image x:Name="image" WidthRequest="300" HorizontalOptions="Center"/>
+        <StackLayout HeightRequest="300">
+            <Image x:Name="image" WidthRequest="300" HorizontalOptions="Center" HeightRequest="300"/>
         </StackLayout>
 
         <Button Text="Zamów" Clicked="Accept" HorizontalOptions="Center" WidthRequest="150" BackgroundColor="DarkGreen" TextColor="White"/>
