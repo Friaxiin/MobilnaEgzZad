@@ -23,11 +23,13 @@ namespace MobilnaEgzZad
             {
                 Price = 50;
                 service = "Pranie";
+                image.Source = "pralka.jpg";
             }
             if (vaccuming.IsChecked)
             {
                 Price = 70;
                 service = "Odkurzanie";
+                image.Source = "odkurzacz.jpg";
             }
             if (fasterService.IsChecked)
             {
@@ -40,7 +42,7 @@ namespace MobilnaEgzZad
         {
             if (washing.IsChecked || vaccuming.IsChecked && price.Text != "")
             {
-                DisplayAlert("Zamówienie zaakceptowane!", "Twoje zamówienie: " + service + "zostało zaakceptowane" + "\n Cena: " + Price + " zł", "OK");
+                DisplayAlert("Zamówienie zaakceptowane!", "Twoje zamówienie: " + service + "zostało zaakceptowane " + "\n Cena: " + Price + " zł", "OK");
             }
         }
     }

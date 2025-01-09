@@ -19,6 +19,11 @@
         <StackLayout Orientation="Horizontal">
             <Label Text="Cena "/>
             <Label Text="" x:Name="price"/>
+            <Label Text=" zł"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Image x:Name="image"/>
         </StackLayout>
 
         <Button Text="Sprawdź cenę" Clicked="CheckPrice"/>
