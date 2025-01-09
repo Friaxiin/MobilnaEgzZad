@@ -47,13 +47,20 @@ namespace MobilnaEgzZad
         }
         private void CheckCheckbox(object sender, CheckedChangedEventArgs e)
         {
-            if (fasterService.IsChecked)
+            if (washing.IsChecked || vaccuming.IsChecked)
             {
-                price.Text = (1.3 * Price).ToString() + " zł";
+                if (fasterService.IsChecked)
+                {
+                    price.Text = (1.3 * Price).ToString() + " zł";
+                }
+                else
+                {
+                    price.Text = Price.ToString() + " zł";
+                }
             }
             else
             {
-                price.Text = Price.ToString() + " zł";
+                fasterService.IsEnabled = false;
             }
         }
     }
