@@ -41,7 +41,7 @@ namespace MobilnaEgzZad
                 Price = 70;
                 service = "Odkurzanie";
                 image.Source = "odkurzacz.jpg";
-                fasterService.IsChecked = false
+                fasterService.IsChecked = false;
             }
             price.Text = Price.ToString();
         }
