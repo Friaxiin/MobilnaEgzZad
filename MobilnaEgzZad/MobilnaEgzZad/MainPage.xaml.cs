@@ -16,7 +16,7 @@ namespace MobilnaEgzZad
         {
             InitializeComponent();
 
-            if (washing.IsChecked || vaccuming.IsChecked)
+            if (!washing.IsChecked || vaccuming.IsChecked)
             {
                 fasterService.IsEnabled = false;
             }
@@ -25,7 +25,7 @@ namespace MobilnaEgzZad
         {
             if (washing.IsChecked || vaccuming.IsChecked)
             {
-                DisplayAlert("Zamówienie zaakceptowane!", "Twoje zamówienie: " + service + " zostało zaakceptowane" + "\nCena: " + price.Text + " zł", "OK");
+                DisplayAlert("Zamówienie zaakceptowane!", "Twoje zamówienie: " + service + " zostało zaakceptowane" + "\nCena: " + price.Text, "OK");
             }
             else
             {
