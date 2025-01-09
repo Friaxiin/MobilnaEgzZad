@@ -3,30 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobilnaEgzZad.MainPage">
 
-    <StackLayout>
-        <Label>Usługi sprzątające</Label>
+    <StackLayout BackgroundColor="LightCyan">
+        <Label FontSize="Header" Text="Usługi sprzątające" TextColor="Black" HorizontalOptions="Center"/>
 
-        <StackLayout RadioButtonGroup.GroupName="services">
-            <RadioButton Content="Pranie" x:Name="washing" CheckedChanged="CheckSelection"/>
-            <RadioButton Content="Odkurzanie" x:Name="vaccuming" CheckedChanged="CheckSelection"/>
+        <Frame BackgroundColor="AliceBlue" BorderColor="Blue">
+            <StackLayout RadioButtonGroup.GroupName="services">
+                <RadioButton Content="Pranie" x:Name="washing" CheckedChanged="CheckSelection"/>
+                <RadioButton Content="Odkurzanie" x:Name="vaccuming" CheckedChanged="CheckSelection"/>
+            </StackLayout>
+        </Frame>
+
+        <StackLayout Orientation="Horizontal">
+            <Label FontSize="16" Text="Usługa przyspieszona" TextColor="Black"/>
+            <CheckBox x:Name="fasterService" CheckedChanged="CheckCheckbox" Color="Black"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal">
-            <Label>Usługa przyspieszona</Label>
-            <CheckBox x:Name="fasterService" CheckedChanged="CheckCheckbox"/>
-        </StackLayout>
-
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Cena "/>
-            <Label Text="" x:Name="price"/>
-            <Label Text=" zł"/>
+            <Label Text="Cena " FontSize="16"/>
+            <Label Text="" x:Name="price" FontSize="16"/>
+            <Label Text=" zł" FontSize="16"/>
         </StackLayout>
 
         <StackLayout>
-            <Image x:Name="image"/>
+            <Image x:Name="image" WidthRequest="300" HorizontalOptions="Center"/>
         </StackLayout>
 
-        <Button Text="Zamów" Clicked="Accept"/>
+        <Button Text="Zamów" Clicked="Accept" HorizontalOptions="Center" WidthRequest="150" BackgroundColor="DarkGreen" TextColor="White"/>
     </StackLayout>
 
 </ContentPage>

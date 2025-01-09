@@ -16,29 +16,6 @@ namespace MobilnaEgzZad
         {
             InitializeComponent();
         }
-
-        /*private void CheckPrice(object sender, EventArgs e)
-        {
-            if (washing.IsChecked)
-            {
-                Price = 50;
-                service = "Pranie";
-                image.Source = "pralka.jpg";
-            }
-            if (vaccuming.IsChecked)
-            {
-                Price = 70;
-                service = "Odkurzanie";
-                image.Source = "odkurzacz.jpg";
-            }
-            if (fasterService.IsChecked)
-            {
-                Price *= 1.3;
-            }
-            price.Text = Price.ToString();
-        }*/
-
-
         private void Accept(object sender, EventArgs e)
         {
             if (washing.IsChecked || vaccuming.IsChecked)
@@ -50,7 +27,6 @@ namespace MobilnaEgzZad
                 DisplayAlert("Błąd", "Wybierz usługę", "OK");
             }
         }
-
         private void CheckSelection(object sender, CheckedChangedEventArgs e)
         {
             if (washing.IsChecked)
@@ -67,7 +43,6 @@ namespace MobilnaEgzZad
             }
             price.Text = Price.ToString();
         }
-
         private void CheckCheckbox(object sender, CheckedChangedEventArgs e)
         {
             if (fasterService.IsChecked)
