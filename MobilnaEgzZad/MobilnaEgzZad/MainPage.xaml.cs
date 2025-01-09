@@ -31,11 +31,15 @@ namespace MobilnaEgzZad
             {
                 Price *= 1.3;
             }
+            price.Text = Price.ToString();
         }
 
         private void Accept(object sender, EventArgs e)
         {
-            DisplayAlert("Zamówienie zaakceptowane!", "Twoje zamówienie: " + service + "zostało zaakceptowane" + "\n Cena: " + Price + " zł", "OK");
+            if (washing.IsChecked || vaccuming.IsChecked)
+            {
+                DisplayAlert("Zamówienie zaakceptowane!", "Twoje zamówienie: " + service + "zostało zaakceptowane" + "\n Cena: " + Price + " zł", "OK");
+            }
         }
     }
 }
