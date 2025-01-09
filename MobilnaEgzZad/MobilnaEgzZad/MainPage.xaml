@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobilnaEgzZad.MainPage">
+
+    <StackLayout>
+        <Label>Usługi sprzątające</Label>
+
+        <StackLayout RadioButtonGroup.GroupName="services">
+            <RadioButton Content="Pranie" x:Name="washing"/>
+            <RadioButton Content="Odkurzanie" x:Name="vaccuming"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label>Usługa przyspieszona</Label>
+            <CheckBox x:Name="fasterService"/>   
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Cena "/>
+            <Label Text="" x:Name="price"/>
+        </StackLayout>
+
+        <Button Text="Sprawdź cenę" Clicked="CheckPrice"/>
+        <Button Text="Zamów" Clicked="Accept"/>
+    </StackLayout>
+
+</ContentPage>
