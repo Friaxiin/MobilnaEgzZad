@@ -22,10 +22,12 @@ namespace MobilnaEgzZad
             if (washing.IsChecked)
             {
                 Price = 50;
+                service = "Pranie";
             }
             if (vaccuming.IsChecked)
             {
                 Price = 70;
+                service = "Odkurzanie";
             }
             if (fasterService.IsChecked)
             {
@@ -36,7 +38,7 @@ namespace MobilnaEgzZad
 
         private void Accept(object sender, EventArgs e)
         {
-            if (washing.IsChecked || vaccuming.IsChecked)
+            if (washing.IsChecked || vaccuming.IsChecked && price.Text != "")
             {
                 DisplayAlert("Zamówienie zaakceptowane!", "Twoje zamówienie: " + service + "zostało zaakceptowane" + "\n Cena: " + Price + " zł", "OK");
             }
