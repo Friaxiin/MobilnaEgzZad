@@ -20,7 +20,7 @@ namespace MobilnaEgzZad
         {
             if (washing.IsChecked || vaccuming.IsChecked)
             {
-                DisplayAlert("Zamówienie zaakceptowane!", "Twoje zamówienie: " + service + " zostało zaakceptowane" + "\nCena: " + Price + " zł", "OK");
+                DisplayAlert("Zamówienie zaakceptowane!", "Twoje zamówienie: " + service + " zostało zaakceptowane" + "\nCena: " + price.Text + " zł", "OK");
             }
             else
             {
